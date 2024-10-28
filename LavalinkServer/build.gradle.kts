@@ -37,6 +37,7 @@ configurations {
 }
 
 dependencies {
+    implementation("com.google.code.gson:gson:2.11.0")
     implementation(projects.protocol)
     implementation(projects.pluginApi) {
         exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
