@@ -5,15 +5,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    id("org.jetbrains.dokka") version "1.8.20" apply false
-    id("com.gorylenko.gradle-git-properties") version "2.4.1"
-    id("org.ajoberstar.grgit") version "5.2.0"
-    id("org.springframework.boot") version "3.1.0" apply false
-    id("org.sonarqube") version "4.2.0.3129"
-    id("com.adarshr.test-logger") version "3.2.0"
-    id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.kotlin.plugin.allopen") version "2.0.0"
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0" apply false
+    id("org.jetbrains.dokka") version "1.9.20" apply false
+    id("com.gorylenko.gradle-git-properties") version "2.4.2"
+    id("org.ajoberstar.grgit") version "5.3.0"
+    id("org.springframework.boot") version "3.3.6" apply false
+    id("org.sonarqube") version "6.0.1.5171"
+    id("com.adarshr.test-logger") version "4.0.0"
+    id("org.jetbrains.kotlin.jvm") version "2.1.0"
+    id("org.jetbrains.kotlin.plugin.allopen") version "2.1.0"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.0" apply false
+    id("com.github.ben-manes.versions") version "0.51.0"
     alias(libs.plugins.maven.publish.base) apply false
 }
 
