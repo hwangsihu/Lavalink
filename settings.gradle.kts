@@ -21,9 +21,9 @@ dependencyResolutionManagement {
 }
 
 fun VersionCatalogBuilder.spring() {
-    version("spring-boot", "3.3.0")
+    version("spring-boot", "3.3.5")
 
-    library("spring-websocket", "org.springframework", "spring-websocket").version("6.1.9")
+    library("spring-websocket", "org.springframework", "spring-websocket").version("6.1.14")
 
     library("spring-boot",          "org.springframework.boot", "spring-boot").versionRef("spring-boot")
     library("spring-boot-web",      "org.springframework.boot", "spring-boot-starter-web").versionRef("spring-boot")
@@ -44,7 +44,7 @@ fun VersionCatalogBuilder.voice() {
     library("koe",          "moe.kyokobot.koe", "core").versionRef("koe")
     library("koe-udpqueue", "moe.kyokobot.koe", "ext-udpqueue").versionRef("koe")
 
-    version("udpqueue", "0.2.7")
+    version("udpqueue", "0.2.9")
     val platforms = listOf("linux-x86-64", "linux-x86", "linux-aarch64", "linux-arm", "linux-musl-x86-64", "linux-musl-aarch64", "win-x86-64", "win-x86", "darwin")
     platforms.forEach {
         library("udpqueue-native-$it", "club.minnced", "udpqueue-native-$it").versionRef("udpqueue")
@@ -65,21 +65,21 @@ fun VersionCatalogBuilder.metrics() {
 }
 
 fun VersionCatalogBuilder.common() {
-    version("kotlin", "2.0.0")
+    version("kotlin", "2.0.21")
 
     library("kotlin-reflect",     "org.jetbrains.kotlin", "kotlin-reflect").versionRef("kotlin")
     library("kotlin-stdlib-jdk8", "org.jetbrains.kotlin", "kotlin-stdlib-jdk8").versionRef("kotlin")
 
-    library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.7.0")
-    library("kotlinx-datetime", "org.jetbrains.kotlinx", "kotlinx-datetime").version("0.6.0")
+    library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json").version("1.7.3")
+    library("kotlinx-datetime", "org.jetbrains.kotlinx", "kotlinx-datetime").version("0.6.1")
 
-    library("logback",        "ch.qos.logback",       "logback-classic").version("1.5.6")
-    library("sentry-logback", "io.sentry",            "sentry-logback").version("7.10.0")
-    library("oshi",           "com.github.oshi",      "oshi-core").version("6.4.11")
+    library("logback",        "ch.qos.logback",       "logback-classic").version("1.5.12")
+    library("sentry-logback", "io.sentry",            "sentry-logback").version("7.16.0")
+    library("oshi",           "com.github.oshi",      "oshi-core").version("6.6.5")
 }
 
 fun VersionCatalogBuilder.other() {
-    val mavenPublishPlugin = version("maven-publish-plugin", "0.28.0")
+    val mavenPublishPlugin = version("maven-publish-plugin", "0.30.0")
 
     plugin("maven-publish", "com.vanniktech.maven.publish").versionRef(mavenPublishPlugin)
     plugin("maven-publish-base", "com.vanniktech.maven.publish.base").versionRef(mavenPublishPlugin)
